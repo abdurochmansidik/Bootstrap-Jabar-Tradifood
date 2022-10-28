@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-md-6 offset-3">
+                <center><h1>Register</h1></center>
+                <form>
+                <div class="mb-3">
+                    <label for="registrasiNama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="registrasiNama">
+                  </div>
+                  <div class="mb-3">
+                    <label for="registrasiEmail" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="registrasiEmail">
+                  </div>
+                  <div class="mb-3">
+                    <label for="registrasiPassword" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="registrasiPassword">
+                  </div>
+                  <div class="mb-3">
+                    <select class="form-select form-select-sm" aria-label=".form-select-sm example" id="registrasiRole">
+                        <option value="init" selected disabled>Pilih Role Anda</option>
+                        <option value="0">User</option>
+                        <option value="1">Admin</option>
+                      </select>
+                  </div>
+                  <button class="btn btn-primary" id="registrasiBtn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    let regitrasiNama = document.getElementById('registrasiNama')
+    let regitrasiEmail = document.getElementById('registrasiEmail')
+    let regitrasiPassword = document.getElementById('registrasiPassword')
+    let regitrasiRole = document.getElementById('registrasiRole')
+    let regitrasiBtn = document.getElementById('registrasiBtn')
+
+    // regitrasiBtn.onclick = () => {
+    //     alert (`Nama : ${registrasiNama.value}`)
+    //     alert (`Email : ${registrasiEmail.value}`)
+    //     alert (`Password : ${registrasiPassword.value}`)
+    //     alert (`Role : ${registrasiRole.value}`)
+    //     alert ('Sukses')
+    // }
+
+    regitrasiBtn.onclick = () => {
+        if (localStorage.getItem('registrasiData')) {
+            var registrasiData = JSON.parse(localStorage.getItem('registrasiData'))
+        } else {
+            var registrasiData = []
+        }
+        regitrasiRole = parseInt (regitrasiRole.value)
+        registrasiData.push ({
+            nama:regitrasiNama.value,
+            email:regitrasiEmail.value,
+            password:regitrasiPassword.value,
+            role:regitrasiRole,
+        })
+        localStorage.setItem('registrasiData',JSON.stringify(registrasiData))
+        regitrasiNama.value = ''
+        regitrasiEmail.value = ''
+        regitrasiPassword.value = ''
+        regitrasiRole.value = 'init'
+        alert(`${regitrasiNama.value} Anda telah berhasil mendaftar !`)
+        window.location.href = '/try-login/login.html'
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

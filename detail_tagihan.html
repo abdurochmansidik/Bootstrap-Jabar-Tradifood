@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar HTML Jabar TradiFood 2</title>
+</head>
+<body>
+
+    <header>
+        <p>
+          <nav>
+          <img src="/component/foto/Logo.png" alt="Logo" width="300">
+            <a href="#"><b>Beranda</b></a>
+            <a href="#"><b>Menu Makanan</b></a>
+            <a href="#"><b>Keluar</b></a> 
+            <img src="/component/foto/check out.jpg" alt="Logo" width="30">
+            <img src="/component/foto/Icon Profil.webp" alt="Logo" width="30">
+          </nav>
+        </p>      
+    </header>
+    
+    <hr/>
+
+    <center>
+    <p>
+        <nav>
+          <a href="#"><b>Keranjang Belanja</b></a>
+          <a href="#"><b>Detail Tagihan</b></a>
+          <a href="#"><b>Pesananan Selesai</b></a> 
+        </nav>
+      </p>
+    </center> 
+    
+    <h3>Detail Tagihan</h3>  
+
+    <form method ="post" action="">
+        <table>
+           <tr>
+                <td>Nama Penerima </td>
+                <td>: <input type="text" name="nama" size ="40" placeholder=
+                 "Isi Nama Lengkap" required></td>
+           </tr>
+           <tr>
+                <td>Nomer Telepon </td>
+                <td>: <input type="text" name="telepon" size ="40" placeholder=
+                 "Isi Nomer Telepon" required></td>
+           </tr>
+           <tr>
+               <td>Alamat Lengkap</td>
+               <td>: <input type="text" name="alamat" size ="40"
+                placeholder="Isi Alamat Lengkap" required></td>
+           </tr>
+           <tr>
+            <td>Tujuan </td>
+            <td>: <select name="tujuan">
+                <option>Bandung</option>
+                <option>Subang</option>
+                <option>Sumedang</option>
+                <option>Bogor</option>
+                <option>Cinjur</option>
+            </select>
+            </td>
+            </tr>
+           <tr>
+               <td>Toko Cabang </td>
+               <td>: <input type="radio" name="tokocabang" value="bandung"
+                required>Bandung
+               <input type="radio" name="tokocabang" value="subang"
+                required>Subang
+                <input type="radio" name="tokocabang" value="sumedang"
+                required>Sumedang
+                <input type="radio" name="tokocabang" value="cianjur"
+                required>Cianjur
+                <input type="radio" name="tokocabang" value="bogor"
+                required>Bogor</td>
+           </tr>
+           <tr>
+               <td>Total Item</td>
+               <td>: <input type="text" name="totalitem" size ="40"
+                placeholder="Total Item + Jasa Antar"></td>
+           </tr>
+           <tr>
+               <td><br><input type="reset" name="buatpesanan" value="Buat Pesanan"></td>
+           </tr>
+          </table>
+        </form>
+
+        <br><br>
+        
+        <footer>© 2022 - Jabar TradiFood | All rights reserved.</footer>
+
+</body>
+</html>

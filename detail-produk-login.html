@@ -87,14 +87,16 @@
             <a href="#!" class="fw-semibold text-decoration-none h5" style="color: #D3AC48;">Cumi</a>
           </div>
 
-          <div class="m-3">
-            <form action="./keranjang_belanja_terisi.html" method="post" enctype="multipart/form-data">
-            <label for="keranjang"><b>Tambah Ke Keranjang</b></label>
-            <input type="number" id="keranjang" name="keranjang" placeholder="">
-            <input type="reset" value="Checkout"><br>
-            </form>
-          </div>
-          
+            <div class="container">
+                <div class="row mt-5 pb-4">
+                    <div class="col-md-6 justify-content-start gap-2 d-flex">
+                      <label for="tambahKeranjang" class="form-label ">Tambah Ke Keranjang</label>
+                      <input type="number" class="form-control" id="tambahKeranjang">
+                      <a href="keranjang-belanja-terisi.html" type="button" class="btn text-white" id="btnCheckout" style="background-color: #D3AC48;">Checkout</a>
+                    </div>
+                </div>
+            </div>
+
         </div>
         
     </div>
